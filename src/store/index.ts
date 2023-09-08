@@ -1,14 +1,15 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
-export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+// My custom modules
+import pokemonModule from "./pokemon";
+import  { pokemonState }  from "./pokemon/state";
+
+export interface StateInterface {
+  pokemon: pokemonState;
+}
+
+export default createStore<StateInterface>({
   modules: {
-  }
-})
+    pokemon: pokemonModule,
+  },
+});
