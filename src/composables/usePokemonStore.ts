@@ -12,6 +12,7 @@ export const usePokemonStore = () => {
     stats: computed(() => store.state.pokemon.stats),
     weight: computed(() => store.state.pokemon.weight),
     height: computed(() => store.state.pokemon.height),
+    isLoading: computed(() => store.state.pokemon.isLoading),
 
     // actions
 
@@ -23,3 +24,4 @@ export const usePokemonStore = () => {
     // getters
   };
 };
+

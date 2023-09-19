@@ -7,7 +7,7 @@ import { PokemonInterface } from "@/interfaces/pokemon";
 const actions: ActionTree<pokemonState, StateInterface> = {
   async getPokemonById({ commit }, id: number) {
     const { data } = await searchPokemonApi.get<PokemonInterface>(`/${id}`);
-
+    commit("setIsLoadingTrue");
     commit("setValuesPokemon", data);
   },
 };
