@@ -7,7 +7,7 @@ export const usePokemonListStore = () => {
 
   return {
     isLoading: computed(() => store.state.pokemonList.isLoading),
-
+    pokemons: computed(() => store.state.pokemonList.pokemons),
     // actions
 
     getPokemonList: (id: string) =>

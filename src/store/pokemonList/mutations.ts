@@ -3,7 +3,6 @@ import { pokemonListState } from "./state";
 import { PokedexInterface } from "@/interfaces/pokedex";
 
 import { getImagePokemon } from "@/composables/getImagePokemon";
-import { usePokemonListStore } from "@/composables/usePokemonListStore";
 
 const mutation: MutationTree<pokemonListState> = {
   addPokemonInfo(state: pokemonListState, data: PokedexInterface) {
